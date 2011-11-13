@@ -6,7 +6,7 @@
 # catalog-version 0.5
 Name:		texlive-latexdiff
 Version:	0.5
-Release:	1
+Release:	2
 Summary:	Determine and mark up significant differences between latex files
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/support/latexdiff
@@ -18,7 +18,7 @@ BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
 Provides:	texlive-latexdiff.bin = %{EVRD}
-Provides:	latexdiff = %{version}
+%rename latexdiff
 Conflicts:	texlive-texmf <= 20110705-3
 Conflicts:	texlive-doc <= 20110705-3
 
