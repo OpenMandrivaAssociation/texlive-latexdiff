@@ -83,3 +83,21 @@ mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf texmf-dist %{buildroot}%{_datadir}
 mkdir -p %{buildroot}%{_mandir}/man1
 mv %{buildroot}%{_texmfdir}/doc/man/man1/*.1 %{buildroot}%{_mandir}/man1
+
+
+%changelog
+* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 0.5-3
++ Revision: 753178
+- Rebuild to reduce used resources
+
+* Sun Nov 13 2011 Paulo Andrade <pcpa@mandriva.com.br> 0.5-2
++ Revision: 730329
+- Use rename macro instead of mix of provides/conflicts/obsoletes
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 0.5-1
++ Revision: 718819
+- texlive-latexdiff
+- texlive-latexdiff
+- texlive-latexdiff
+- texlive-latexdiff
+
