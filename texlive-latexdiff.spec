@@ -1,12 +1,12 @@
-# revision 16433
+# revision 30961
 # category Package
 # catalog-ctan /support/latexdiff
-# catalog-date 2009-12-14 16:43:49 +0100
+# catalog-date 2013-06-17 18:07:35 +0200
 # catalog-license gpl
-# catalog-version 0.5
+# catalog-version 1.0.3
 Name:		texlive-latexdiff
-Version:	0.5
-Release:	3
+Version:	1.0.3
+Release:	1
 Summary:	Determine and mark up significant differences between latex files
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/support/latexdiff
@@ -48,23 +48,21 @@ selected changes only.
 %{_texmfdistdir}/scripts/latexdiff/latexdiff-vc.pl
 %{_texmfdistdir}/scripts/latexdiff/latexdiff.pl
 %{_texmfdistdir}/scripts/latexdiff/latexrevise.pl
-%doc %{_texmfdistdir}/doc/latex/latexdiff/CHANGES
-%doc %{_texmfdistdir}/doc/latex/latexdiff/LICENSE
-%doc %{_texmfdistdir}/doc/latex/latexdiff/Makefile
-%doc %{_texmfdistdir}/doc/latex/latexdiff/README
-%doc %{_texmfdistdir}/doc/latex/latexdiff/contrib/latexdiff-wrap
-%doc %{_texmfdistdir}/doc/latex/latexdiff/contrib/latexdiff.spec
-%doc %{_texmfdistdir}/doc/latex/latexdiff/example/example-draft.tex
-%doc %{_texmfdistdir}/doc/latex/latexdiff/example/example-rev.tex
-%doc %{_texmfdistdir}/doc/latex/latexdiff/latexdiff
-%doc %{_texmfdistdir}/doc/latex/latexdiff/latexdiff-fast
-%doc %{_texmfdistdir}/doc/latex/latexdiff/latexdiff-man.pdf
 %doc %{_mandir}/man1/latexdiff-vc.1*
-%doc %{_texmfdir}/doc/man/man1/latexdiff-vc.man1.pdf
+%doc %{_texmfdistdir}/doc/man/man1/latexdiff-vc.man1.pdf
 %doc %{_mandir}/man1/latexdiff.1*
-%doc %{_texmfdir}/doc/man/man1/latexdiff.man1.pdf
+%doc %{_texmfdistdir}/doc/man/man1/latexdiff.man1.pdf
 %doc %{_mandir}/man1/latexrevise.1*
-%doc %{_texmfdir}/doc/man/man1/latexrevise.man1.pdf
+%doc %{_texmfdistdir}/doc/man/man1/latexrevise.man1.pdf
+%doc %{_texmfdistdir}/doc/support/latexdiff/COPYING
+%doc %{_texmfdistdir}/doc/support/latexdiff/README
+%doc %{_texmfdistdir}/doc/support/latexdiff/doc/example-diff.tex
+%doc %{_texmfdistdir}/doc/support/latexdiff/doc/latexdiff-man.pdf
+%doc %{_texmfdistdir}/doc/support/latexdiff/doc/latexdiff-man.tex
+%doc %{_texmfdistdir}/doc/support/latexdiff/example/example-draft.tex
+%doc %{_texmfdistdir}/doc/support/latexdiff/example/example-rev.tex
+%doc %{_texmfdistdir}/doc/support/latexdiff/latexdiff
+%doc %{_texmfdistdir}/doc/support/latexdiff/latexdiff-fast
 
 #-----------------------------------------------------------------------
 %prep
@@ -80,24 +78,6 @@ pushd %{buildroot}%{_bindir}
     ln -sf %{_texmfdistdir}/scripts/latexdiff/latexrevise.pl latexrevise
 popd
 mkdir -p %{buildroot}%{_datadir}
-cp -fpar texmf texmf-dist %{buildroot}%{_datadir}
+cp -fpar texmf-dist %{buildroot}%{_datadir}
 mkdir -p %{buildroot}%{_mandir}/man1
-mv %{buildroot}%{_texmfdir}/doc/man/man1/*.1 %{buildroot}%{_mandir}/man1
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 0.5-3
-+ Revision: 753178
-- Rebuild to reduce used resources
-
-* Sun Nov 13 2011 Paulo Andrade <pcpa@mandriva.com.br> 0.5-2
-+ Revision: 730329
-- Use rename macro instead of mix of provides/conflicts/obsoletes
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 0.5-1
-+ Revision: 718819
-- texlive-latexdiff
-- texlive-latexdiff
-- texlive-latexdiff
-- texlive-latexdiff
-
+mv %{buildroot}%{_texmfdistdir}/doc/man/man1/*.1 %{buildroot}%{_mandir}/man1
