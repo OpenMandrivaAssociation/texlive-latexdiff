@@ -1,12 +1,6 @@
-# revision 30961
-# category Package
-# catalog-ctan /support/latexdiff
-# catalog-date 2013-06-17 18:07:35 +0200
-# catalog-license gpl
-# catalog-version 1.0.3
 Name:		texlive-latexdiff
-Version:	1.0.3
-Release:	9
+Version:	1.2.1
+Release:	1
 Summary:	Determine and mark up significant differences between latex files
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/support/latexdiff
@@ -45,24 +39,14 @@ selected changes only.
 %{_bindir}/latexdiff-vc
 %{_bindir}/latexdiff
 %{_bindir}/latexrevise
-%{_texmfdistdir}/scripts/latexdiff/latexdiff-vc.pl
-%{_texmfdistdir}/scripts/latexdiff/latexdiff.pl
-%{_texmfdistdir}/scripts/latexdiff/latexrevise.pl
+%{_texmfdistdir}/scripts/latexdiff
 %doc %{_mandir}/man1/latexdiff-vc.1*
 %doc %{_texmfdistdir}/doc/man/man1/latexdiff-vc.man1.pdf
 %doc %{_mandir}/man1/latexdiff.1*
 %doc %{_texmfdistdir}/doc/man/man1/latexdiff.man1.pdf
 %doc %{_mandir}/man1/latexrevise.1*
 %doc %{_texmfdistdir}/doc/man/man1/latexrevise.man1.pdf
-%doc %{_texmfdistdir}/doc/support/latexdiff/COPYING
-%doc %{_texmfdistdir}/doc/support/latexdiff/README
-%doc %{_texmfdistdir}/doc/support/latexdiff/doc/example-diff.tex
-%doc %{_texmfdistdir}/doc/support/latexdiff/doc/latexdiff-man.pdf
-%doc %{_texmfdistdir}/doc/support/latexdiff/doc/latexdiff-man.tex
-%doc %{_texmfdistdir}/doc/support/latexdiff/example/example-draft.tex
-%doc %{_texmfdistdir}/doc/support/latexdiff/example/example-rev.tex
-%doc %{_texmfdistdir}/doc/support/latexdiff/latexdiff
-%doc %{_texmfdistdir}/doc/support/latexdiff/latexdiff-fast
+%doc %{_texmfdistdir}/doc/support/latexdiff
 
 #-----------------------------------------------------------------------
 %prep
