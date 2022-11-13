@@ -1,12 +1,12 @@
 Name:		texlive-latexdiff
-Version:	1.3.0
-Release:	2
+Version:	64980
+Release:	1
 Summary:	Determine and mark up significant differences between latex files
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/support/latexdiff
 License:	GPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/latexdiff.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/latexdiff.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/latexdiff.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/latexdiff.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -27,12 +27,12 @@ to override this default behaviour and accept or reject
 selected changes only.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -50,16 +50,16 @@ selected changes only.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_bindir}
 pushd %{buildroot}%{_bindir}
-    ln -sf %{_texmfdistdir}/scripts/latexdiff/latexdiff-vc.pl latexdiff-vc
-    ln -sf %{_texmfdistdir}/scripts/latexdiff/latexdiff.pl latexdiff
-    ln -sf %{_texmfdistdir}/scripts/latexdiff/latexrevise.pl latexrevise
+ln -sf %{_texmfdistdir}/scripts/latexdiff/latexdiff-vc.pl latexdiff-vc
+ln -sf %{_texmfdistdir}/scripts/latexdiff/latexdiff.pl latexdiff
+ln -sf %{_texmfdistdir}/scripts/latexdiff/latexrevise.pl latexrevise
 popd
 mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf-dist %{buildroot}%{_datadir}
