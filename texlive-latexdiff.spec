@@ -1,6 +1,6 @@
 Name:		texlive-latexdiff
-Version:	64980
-Release:	2
+Version:	72099
+Release:	1
 Summary:	Determine and mark up significant differences between latex files
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/support/latexdiff
