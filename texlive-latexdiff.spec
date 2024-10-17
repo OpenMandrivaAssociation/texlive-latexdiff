@@ -3,7 +3,7 @@ Version:	72099
 Release:	1
 Summary:	Determine and mark up significant differences between latex files
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/support/latexdiff
+URL:		https://www.ctan.org/tex-archive/support/latexdiff
 License:	GPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/latexdiff.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/latexdiff.doc.r%{version}.tar.xz
